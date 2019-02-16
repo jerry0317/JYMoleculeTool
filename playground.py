@@ -1,7 +1,9 @@
 import numpy as np
 import itertools
 
-print(list(itertools.product([-1,1],repeat=3)))
+import m_tools as mt
+
+print(mt.distance([1,1,1], [-1,0,1]))
 
 # mC = 12.0
 # rC_vec = [-2.12929, -2.15420, 2.95186]

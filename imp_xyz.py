@@ -27,6 +27,24 @@ def import_xyz(file):
 
     return xyz_count, xyz_comment, molecules
 
+# Export XYZ file
+def export_xyz(file, mols, comment=""):
+    with open(file, "w+") as f:
+        f.write(str(len(mols)))
+        f.write("\n")
+
+        f.write(comment + "\n")
+
+        for m in mols:
+            try:
+                f.write("{0}       {1}       {2}       {3}\n".format(m['name'], *m['rvec']))
+            except Exception as e:
+                print(e)
+            else:
+                continue
+
+    print("xyz file saved.")
+
 # Select molecule from list by name
 def select_by_name(mol_list, name):
     sl = []
