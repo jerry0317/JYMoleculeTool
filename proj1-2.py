@@ -22,7 +22,7 @@ mol_O = ix.select_by_name(dmol, 'O')
 CO_BOND_LENGTH = 1.43
 CC_BOND_LENGTH = 1.54
 
-TOLERANCE_LEVEL = 0.15 # In bond-length filters, an atom passes the filter when the distance lies between BOND_LENGTH ± TOLERANCE_LEVEL
+TOLERANCE_LEVEL = 0.15 # In bond-length filters, an atom passes the filter when the distance lies between BOND_LENGTH plus/minus TOLERANCE_LEVEL
 
 # Fix the first O (O1)
 # We choose the first fixed (and the only fixed) atom to be O because it should be easy to find the C adjacent to it. Other two C-s are further than its neighboring C.
@@ -41,7 +41,8 @@ def find_C2(O1, mol_C):
 def find_C3C4(C2, O1, mol_C):
     # Find the possible neighboring C(s) of C2 (C3/C4)
     C3_possibles = filter(lambda m: m['index'] != C2['index'], mt.find_possibles(mol_C))
-    C3_af = filter(lambda m: mt.bond_length_filter(m['rvec'], C2['rvec'], CC_BOND_LENGTH, TOLERANCE_LEVEL), C3_possibles) # Change the selection of O1 to see how the code below works
+    d_C2O1 = mt.distance(C2['rvec'], O1['rvec'])
+    C3_af = filter(lambda m: mt.bond_length_filter(m['rvec'], C2['rvec'], CC_BOND_LENGTH, TOLERANCE_LEVEL) and mt.distance(m['rvec'], O1['rvec']) > d_C2O1, C3_possibles) # Change the selection of O1 to see how the code below works # Extra filter: Make sure C3 is not close to O1 (which is adjacent to C2)
     C3_af_index = set()
 
     for c3 in C3_af:
@@ -62,25 +63,22 @@ def find_C3C4(C2, O1, mol_C):
 
     return C2_adj, C3C4_af
 
-def find_O5_C2adj1(C3, mol_Or): # If C2 is adjacent to one C (C3), then C3 must be connected to an O (O5).
-    return find_C2(C3, mol_Or) # The same procedure as finding C2
+def find_O5_C2adj1(C2, C3, mol_Or): # If C2 is adjacent to one C (C3), then C3 must be connected to an O (O5).
+    O5_possibles = mt.find_possibles(mol_Or)
+    O5_af = filter(lambda m: mt.bond_length_filter(m['rvec'], C3['rvec'], CO_BOND_LENGTH, TOLERANCE_LEVEL) and mt.distance(m['rvec'], C2['rvec']) > (CO_BOND_LENGTH + TOLERANCE_LEVEL), O5_possibles)
+    return O5_af
 
 def find_C4_C2adj1(C2, C3, O5, mol_C):
     # Find the possible C4
     C4_possibles = filter(lambda m: m['index'] not in (C2['index'], C3['index']), mt.find_possibles(mol_C))
-    C4_af = filter(lambda m: mt.bond_length_filter(m['rvec'], C3['rvec'], CC_BOND_LENGTH, TOLERANCE_LEVEL), C4_possibles)
+    d_C3O5 = mt.distance(C3['rvec'], O5['rvec'])
+    C4_af = filter(lambda m: mt.bond_length_filter(m['rvec'], C3['rvec'], CC_BOND_LENGTH, TOLERANCE_LEVEL) and mt.distance(m['rvec'], O5['rvec']) > d_C3O5, C4_possibles) # Extra filter: Make sure C4 is not close to O5 (which is adjacent to C3)
 
-    C4_af2 = []
-    d_C3O5 = mt.distance(C3['rvec'], O5['rvec']) # Make sure C4 is not close to O5 (which is adjacent to C3)
-    for m in C4_af:
-        if mt.distance(m['rvec'], O5['rvec']) > d_C3O5:
-            C4_af2.append(m)
-
-    return C4_af2
+    return C4_af
 
 def find_O5_C2adj2(C3, C4, mol_Or): # If C2 is adjacent to two C-s (C3, C4), then O5 must be adjacent to one of C3 and C4.
     O5_possibles = mt.find_possibles(mol_Or)
-    O5_afC3 = filter(lambda m: mt.bond_length_filter(m['rvec'], C3['rvec'], CO_BOND_LENGTH, TOLERANCE_LEVEL) and mt.distance(m['rvec'], C4['rvec']) > (CO_BOND_LENGTH + TOLERANCE_LEVEL), O5_possibles)
+    O5_afC3 = filter(lambda m: mt.bond_length_filter(m['rvec'], C3['rvec'], CO_BOND_LENGTH, TOLERANCE_LEVEL) and mt.distance(m['rvec'], C4['rvec']) > (CO_BOND_LENGTH + TOLERANCE_LEVEL), O5_possibles) # Extra filter: If O5 is connected to C3, make sure it is not too close to C4 (vice versa)
     O5_afC4 = filter(lambda m: mt.bond_length_filter(m['rvec'], C4['rvec'], CO_BOND_LENGTH, TOLERANCE_LEVEL) and mt.distance(m['rvec'], C3['rvec']) > (CO_BOND_LENGTH + TOLERANCE_LEVEL), O5_possibles)
 
     O5_af = O5_afC3 + O5_afC4
@@ -105,7 +103,7 @@ for C2 in C2_af:
     if C2_adj == 1:
         for C3C4 in C3C4_af:
             C3 = C3C4
-            O5_af = find_O5_C2adj1(C3, mol_Or)
+            O5_af = find_O5_C2adj1(C2, C3, mol_Or)
             for O5 in O5_af:
                 C4_af = find_C4_C2adj1(C2, C3, O5, mol_C)
                 i = 1
