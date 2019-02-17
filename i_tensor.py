@@ -1,3 +1,5 @@
+# Code by Jerry Yan
+
 import numpy as np
 
 INDEX_RANGE = range(0,3)

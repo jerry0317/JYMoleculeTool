@@ -12,7 +12,7 @@ file_name = "propanediol-2"
 _, _, mol = ix.import_xyz("molecule_models/{}.xyz".format(file_name))
 dmol = ix.select_by_name(mol,'C') + ix.select_by_name(mol,'O')
 
-# De-signing dmol (taking absolute value)
+# De-signing dmol (taking absolute value) to obtain |x|, |y|, |z| for each oxygen or carbon atom
 for i, m in enumerate(dmol):
     dmol[i]['rvec'] = list(map(abs, dmol[i]['rvec']))
 
@@ -22,7 +22,7 @@ mol_O = ix.select_by_name(dmol, 'O')
 CO_BOND_LENGTH = 1.43
 CC_BOND_LENGTH = 1.54
 
-TOLERANCE_LEVEL = 0.15
+TOLERANCE_LEVEL = 0.15 # In bond-length filters, an atom passes the filter when the distance lies between BOND_LENGTH ± TOLERANCE_LEVEL
 
 # Fix the first O (O1)
 # We choose the first fixed (and the only fixed) atom to be O because it should be easy to find the C adjacent to it. Other two C-s are further than its neighboring C.
@@ -98,6 +98,7 @@ def save_mols(mols, icode = None):
     print("Results saved to xyz file.")
 
 
+# Use the alogrithm above to determine the structure of molecule (x, y, z for each of carbon and oxygen atom)
 C2_af = find_C2(O1, mol_C)
 for C2 in C2_af:
     C2_adj, C3C4_af = find_C3C4(C2, O1, mol_C)

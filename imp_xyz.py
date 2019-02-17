@@ -1,3 +1,5 @@
+# Code by Jerry Yan
+
 # Import from XYZ file
 def import_xyz(file):
     with open(file) as f:

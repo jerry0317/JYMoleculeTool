@@ -1,3 +1,5 @@
+# Code by Jerry Yan
+
 import numpy as np
 import itertools
 
