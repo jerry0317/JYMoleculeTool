@@ -39,7 +39,8 @@ def bond_length_filter(rvec_1, rvec_2, b_length, tol_range = 0.1):
     else:
         return False
 
-def bond_length_error(af, name):
+def bond_length_error(af, name, ex = True):
     print("--Unable to narrow down to one {} by bond-length filtering.--".format(name))
     print("The most narrow results for {0} are \n {1}".format(name, str(af)))
-    exit()
+    if ex:
+        exit()

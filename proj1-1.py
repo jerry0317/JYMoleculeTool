@@ -8,6 +8,7 @@ import imp_xyz as ix
 _, _, mol = ix.import_xyz("molecule_models/propanediol-1.xyz")
 dmol = ix.select_by_name(mol,'C') + ix.select_by_name(mol,'O')
 
+# ABC for each atom
 for m in dmol:
     mass = ix.mass_cgs_by_name(m['name'])
     rvec = ix.length_cgs_by_rvec(m['rvec'])
@@ -15,6 +16,7 @@ for m in dmol:
     abc = it.abc_cgs_from_i(i_tens)
     print(abc, m['name'])
 
+# ABC of the entire molecule
 # mol_m = [ix.mass_cgs_by_name(m['name']) for m in mol]
 # mol_rvec = [ix.length_cgs_by_rvec(m['rvec']) for m in mol]
 #
