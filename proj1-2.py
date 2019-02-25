@@ -7,7 +7,7 @@ import m_tools as mt
 import time
 import itertools
 
-file_name = "propanediol-2"
+file_name = "propanediol-1"
 
 _, _, mol = ix.import_xyz("molecule_models/{}.xyz".format(file_name))
 dmol = ix.select_by_name(mol,'C') + ix.select_by_name(mol,'O')
@@ -26,7 +26,7 @@ TOLERANCE_LEVEL = 0.15 # In bond-length filters, an atom passes the filter when 
 
 # Fix the first O (O1)
 # We choose the first fixed (and the only fixed) atom to be O because it should be easy to find the C adjacent to it. Other two C-s are further than its neighboring C.
-O1 = mol_O[0]
+O1 = mol_O[1]
 print("O1 has been fixed.")
 
 mol_Or = mol_O
@@ -92,7 +92,7 @@ def save_mols(mols, icode = None):
         filename = 'molecule_results/{0}_{1}.xyz'.format(file_name,int(time.time()))
     else:
         filename = 'molecule_results/{0}_{1}_{2}.xyz'.format(file_name,int(time.time()),str(icode))
-    ix.export_xyz(filename, mols)
+    #ix.export_xyz(filename, mols)
     print("Results saved to xyz file.")
 
 
