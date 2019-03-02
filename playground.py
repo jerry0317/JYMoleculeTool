@@ -5,7 +5,10 @@ import itertools
 
 import m_tools as mt
 
-print(mt.distance([1,1,1], [-1,0,1]))
+CO1_bond = mt.chem_bond("O", "C", 3)
+print(CO1_bond.validate())
+
+
 
 # mC = 12.0
 # rC_vec = [-2.12929, -2.15420, 2.95186]

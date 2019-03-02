@@ -74,3 +74,15 @@ def length_cgs_by_rvec(rvec):
     A = 10**(-8)
     rvec = [r * A for r in rvec]
     return rvec
+
+# Save a molecule to xyz (suffix with unix time)
+def save_mols(mols, icode = None):
+    print("-----The structure of molecule is found as follows:-----")
+    for m in mols:
+        print("{0}    {1}".format(m['name'], m['rvec']))
+    if icode is None:
+        filename = 'molecule_results/{0}_{1}.xyz'.format(file_name,int(time.time()))
+    else:
+        filename = 'molecule_results/{0}_{1}_{2}.xyz'.format(file_name,int(time.time()),str(icode))
+    export_xyz(filename, mols)
+    print("Results saved to xyz file.")
