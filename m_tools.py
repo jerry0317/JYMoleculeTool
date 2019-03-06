@@ -93,4 +93,52 @@ def bond_length_error(af, name, ex = True):
     if ex:
         exit()
 
-# TODO: Find possible bonds between two atoms
+# Find possible bonds between two atoms
+def possible_bonds(atom_1, atom_2):
+    p_range = range(1, 4)
+    p_bonds = []
+    for ord in p_range:
+        bond = chem_bond(atom_1, atom_2, ord)
+        if bond.validate() == True:
+            p_bonds.append(bond)
+    return p_bonds
+
+# # Bond length validation
+# def bond_length_validator(mols, tol_range = 0.1):
+#     if len(mols) <= 1:
+#         return True
+#     else:
+#         # Use combinatorial (n choose 2) to select two elements
+#         possible_pairs = itertools.combinations(mols, 2)
+#         for p in possible_pairs:
+#             a1 = p[0]
+#             a2 = p[1]
+#             possible_bs = possible_bonds(a1['name'], a2['name'])
+#             b_pass = False
+#             for b in possible_bs:
+#                 if bond_length_filter(a1['rvec'], a2['rvec'], b.length, tol_range) is True:
+#                     b_pass = True
+#             if b_pass is False:
+#                 return False
+#         return True
+
+def bond_length_atom_finder(validated_mols, m, tol_range = 0.1):
+    if len(validated_mols) <= 0:
+        return True
+    else:
+        b_pass = False
+        for vm in validated_mols:
+            possible_bs = possible_bonds(vm['name'], m['name'])
+            for b in possible_bs:
+                if bond_length_filter(vm['rvec'], m['rvec'], b.length, tol_range) is True:
+                    v_mols_n = [vmol for vmol in validated_mols if vmol != vm]
+                    d_pass = True
+                    for vm2 in v_mols_n:
+                        if distance(vm2['rvec'], m['rvec']) < (b.length - tol_range):
+                            d_pass = False
+                    if d_pass is True:
+                        b_pass = True
+        if b_pass is False:
+            return False
+        else:
+            return True
