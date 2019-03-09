@@ -8,7 +8,7 @@ import m_tools as mt
 # CO1_bond = mt.chem_bond("O", "C", 3)
 # print(CO1_bond.validate())
 
-print([b.bdcode for b in mt.possible_bonds("O", "O")])
+print([b.length for b in mt.possible_bonds("C", "C")])
 
 
 # mC = 12.0

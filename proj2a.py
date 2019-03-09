@@ -21,6 +21,8 @@ mol_O = ix.select_by_name(dmol, 'O')
 
 mol_comb = mol_C + mol_O
 
+mol_comb = mt.dict_list_to_atom_list(mol_comb)
+
 CO_BOND_LENGTH = 1.43
 CC_BOND_LENGTH = 1.54
 
@@ -28,53 +30,52 @@ TOLERANCE_LEVEL = 0.1 # In bond-length filters, an atom passes the filter when t
 
 # Fix the first atom
 A1 = mol_comb[0]
+
 print("The first atom has been fixed.")
 
 mol_combr = [m for m in mol_comb if m != A1]
 
-def rcs_filter(a_r, base_group, tol_range = 0.1):
-    possible_a = mt.find_possibles([a_r]) # Find all possible rvec for a_r
-
-    possible_af1 = filter(lambda m: mt.bond_length_atom_finder(base_group, m, tol_range), possible_a)
-
-    return possible_af1
 
 possible_list = []
 
-def rcs_action(mol_r, p_a, b_s, tol_range = 0.1):
+# TODO: DEBUGGING!!!
+
+def rcs_constructer_atom(atom_r, st_mol, tol_range = 0.1):
+    possible_atoms = mt.find_possibles_atom([atom_r])
+
+    s_m_list = []
+    for p_atom in possible_atoms:
+        s_m = mt.bond_length_molecule_constructer(st_mol, atom_r, tol_range)
+
+        if len(s_m.bond_graphs) > 0:
+            s_m_list.append(s_m)
+
+    return s_m_list
+
+def rcs_action_atom(mol_r, m_list, tol_range = 0.1):
     if len(mol_r) > 0:
-        for p in p_a: # Possible atom
-            for a_r in mol_r: # Remaining atoms
-                b_sf = b_s + [p]
-
-                p_af1 = rcs_filter(a_r, b_sf, tol_range)
-
-                if len(p_af1) > 0:
-                    mol_rf1 = [m for m in mol_r if m != a_r]
-                    rcs_action(mol_rf1, p_af1, b_sf, tol_range)
+        for m in m_list:
+            for a_r in mol_r:
+                ml_af1 = rcs_constructer_atom(a_r, m, tol_range)
+                if len(ml_af1) > 0:
+                    mol_rf1 = [mol for mol in mol_r if mol != a_r]
+                    rcs_action_atom(mol_rf1, ml_af1, tol_range)
     elif len(mol_r) == 0:
-        for p in p_a:
-            mols = b_s + [p]
+        for m in m_list:
+            possible_list.append(m)
 
-            duplicated = False
-            rvec_set = set([tuple(m['rvec']) for m in mols])
-            for pl in possible_list:
-                pl_rvec_set = set([tuple(m['rvec']) for m in pl])
-                if rvec_set == pl_rvec_set:
-                    duplicated = True
-                    continue
-            if duplicated is False:
-                possible_list.append(mols)
 
-rcs_action(mol_combr, [A1], [], TOLERANCE_LEVEL)
+
+initial_smol = mt.Strc_molecule(atoms = {A1})
+rcs_action_atom(mol_combr, [initial_smol], TOLERANCE_LEVEL)
 
 print("Number of combinations to work with: {}".format(8**(len(mol_combr))))
 print("Number of plausible results: {}".format(len(possible_list)))
 
-def save_mols(mols, icode = None):
+def save_mols_atom(st_mol, icode = None):
     print("-----The structure of molecule is found as follows:-----")
-    for m in mols:
-        print("{0}    {1}".format(m['name'], m['rvec']))
+    for a in st_mol.atoms:
+        print("{0}    {1}".format(a.name, a.rvec))
     if icode is None:
         filename = 'molecule_results/{0}_{1}.xyz'.format(file_name,int(time.time()))
     else:
@@ -85,4 +86,4 @@ def save_mols(mols, icode = None):
 i = 0
 for pl in possible_list:
     i += 1
-    save_mols(pl, i)
+    save_mols_atom(pl, i)
