@@ -35,7 +35,6 @@ print("The first atom has been fixed.")
 
 mol_combr = [m for m in mol_comb if m != A1]
 
-
 possible_list = []
 
 # TODO: DEBUGGING!!!
@@ -63,6 +62,7 @@ def rcs_action_atom(mol_r, m_list, tol_range = 0.1):
     elif len(mol_r) == 0:
         for m in m_list:
             possible_list.append(m)
+        print(len(possible_list))
 
 
 

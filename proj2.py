@@ -7,7 +7,7 @@ import m_tools as mt
 import time
 import itertools
 
-file_name = "branchedalcohola"
+file_name = "butanolcalcwithH"
 
 _, _, mol = ix.import_xyz("molecule_models/{}.xyz".format(file_name))
 dmol = ix.select_by_name(mol,'C') + ix.select_by_name(mol,'O')
@@ -73,6 +73,9 @@ print("Number of plausible results: {}".format(len(possible_list)))
 
 def save_mols(mols, icode = None):
     print("-----The structure of molecule is found as follows:-----")
+
+    if icode != None:
+        print("**** Molecule No.{} ****".format(icode))
     for m in mols:
         print("{0}    {1}".format(m['name'], m['rvec']))
     if icode is None:
@@ -81,6 +84,20 @@ def save_mols(mols, icode = None):
         filename = 'molecule_results/{0}_{1}_{2}.xyz'.format(file_name,int(time.time()),str(icode))
     # ix.export_xyz(filename, mols)
     # print("Results saved to xyz file.")
+
+    #
+    # rmol_C = ix.select_by_name(mols, 'C')
+    # import itertools
+    # CC_lengths = []
+    # possible_Cpairs = itertools.combinations(rmol_C, 2)
+    # for p in possible_Cpairs:
+    #     d = mt.distance(p[0]['rvec'], p[1]['rvec'])
+    #     if d < 3:
+    #         CC_lengths.append(d)
+    # CC_lengths.sort()
+    #
+    # CC_lengths = [round(c, 3) for c in CC_lengths]
+    # print(CC_lengths)
 
 i = 0
 for pl in possible_list:

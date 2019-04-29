@@ -26,6 +26,15 @@ class Chem_bond_type(object):
         self.atoms = [atom_1, atom_2]
         self.bond_order = bond_order
 
+    def __eq__(self, other):
+        if not isinstance(other, Chem_bond_type):
+            return NotImplemented
+
+        return self.bdcode == other.bdcode
+
+    def __hash__(self):
+        return hash(self.bdcode)
+
     @property
     def bdcode(self):
         code = ""
@@ -59,11 +68,28 @@ class Atom(object):
         self.name = name
         self.rvec = rvec
 
+    def __eq__(self, other):
+        if not isinstance(other, Atom):
+            return NotImplemented
+
+        return self.name == other.name and self.rvec == other.rvec
+
+    def __hash__(self):
+        return hash((self.name, self.rvec))
+
 # Bond
 class Chem_bond(object):
     def __init__(self, atom_1, atom_2, bond_type):
         self.atoms = {atom_1, atom_2}
         self.type = bond_type
+
+    def __eq__(self, other):
+        if not isinstance(other, Chem_bond):
+            return NotImplemented
+        return self.atoms == other.atoms and self.type == other.type
+
+    def __hash__(self):
+        return hash((frozenset(self.atoms), self.type))
 
     # Real distance between the two atoms (real bond length)
     @property
@@ -78,12 +104,24 @@ class Chem_bond_graph(object):
     def __init__(self, bonds = set()):
         self.bonds = bonds
 
+    def __eq__(self, other):
+        if not isinstance(other, Chem_bond_graph):
+            return NotImplemented
+
+        return self.bonds == other.bonds
+
+    def __hash__(self):
+        return hash(frozenset(self.bonds))
+
     def atom_degree(self, atom):
         deg = 0
         for b in self.bonds:
             if atom in b.atoms:
                 deg += 1
         return deg
+
+    def print_bdcodes(self):
+        print([bond.type.bdcode for bond in self.bonds])
 
 # Structural Molecule
 class Strc_molecule(object):
@@ -95,9 +133,40 @@ class Strc_molecule(object):
     def size(self):
         return len(self.atoms)
 
+    def __eq__(self, other):
+        if not isinstance(other, Strc_molecule):
+            return NotImplemented
+
+        return self.atoms == other.atoms and self.bond_graphs == other.bond_graphs
+
     def add_atom(self, atom):
         self.atoms.add(atom)
 
+# Position vector
+class Vector(object):
+    def __init__(self, x=0, y=0, z=0):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __eq__(self, other):
+        if not isinstance(other, Vector):
+            return NotImplemented
+
+        return (self.x == other.x and self.y == other.y and self.z == other.z)
+
+    def __hash__(self):
+        return hash((self.x, self.y, self.z))
+
+    @property
+    def dictvec(self):
+        return [self.x, self.y, self.z]
+
+    @dictvec.setter
+    def dictvec(self, dict):
+        self.x = dict[0]
+        self.y = dict[1]
+        self.z = dict[2]
 
 # Resign the rvec based on |x|, |y|, |z|
 def re_sign_n(rvec):
@@ -109,6 +178,21 @@ def re_sign_n(rvec):
         r = rvec
         nr = [r[i]*s[i] for i in INDEX_RANGE]
         pl.append(nr)
+
+    return pl
+
+# Resign the rvec based on |x|, |y|, |z| (Atom version)
+def re_sign_n_atom(rvec):
+    pl = []
+
+    SLIST = list(map(list, itertools.product([-1,1], repeat=len(INDEX_RANGE))))
+
+    for s in SLIST:
+        r = rvec.dictvec
+        nr = [r[i]*s[i] for i in INDEX_RANGE]
+        n_vec = Vector()
+        n_vec.dictvec = nr
+        pl.append(n_vec)
 
     return pl
 
@@ -127,7 +211,7 @@ def find_possibles(mols):
 def find_possibles_atom(atoms):
     possibles = []
     for a in atoms:
-        pl = re_sign_n(a.rvec)
+        pl = re_sign_n_atom(a.rvec)
         for p in pl:
             atm = Atom(a.name, p)
             possibles.append(atm)
@@ -141,7 +225,7 @@ def distance(rvec_1, rvec_2):
 
 # Calculate the distance between two atoms
 def distance_atom(atom_1, atom_2):
-    return distance(atom_1.rvec, atom_2.rvec)
+    return distance(atom_1.rvec.dictvec, atom_2.rvec.dictvec)
 
 # Filtering by the bond length
 def bond_length_filter(rvec_1, rvec_2, b_length, tol_range = 0.1):
@@ -153,7 +237,7 @@ def bond_length_filter(rvec_1, rvec_2, b_length, tol_range = 0.1):
 
 # Filtering by bond length (atom version)
 def bondtype_length_filter_atom(atom_1, atom_2, bondtype, tol_range = 0.1):
-    return bond_length_filter(atom_1.rvec, atom_2.rvec, bondtype.length, tol_range)
+    return bond_length_filter(atom_1.rvec.dictvec, atom_2.rvec.dictvec, bondtype.length, tol_range)
 
 # Error Message for bond length filters
 def bond_length_error(af, name, ex = True):
@@ -231,7 +315,8 @@ def bond_length_molecule_constructer(st_mol, atom, tol_range = 0.1):
 def dict_to_atom(mol):
     name = mol['name']
     try:
-        rvec = mol['rvec']
+        rvec = Vector()
+        rvec.dictvec = mol['rvec']
     except Exception as e:
         rvec = None
     at = Atom(name, rvec)
