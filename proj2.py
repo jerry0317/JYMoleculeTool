@@ -7,7 +7,8 @@ import m_tools as mt
 import time
 import itertools
 
-file_name = "butanolcalcwithH"
+file_name = "branchedalcohola"
+SAVE_XYZ = False
 
 _, _, mol = ix.import_xyz("molecule_models/{}.xyz".format(file_name))
 dmol = ix.select_by_name(mol,'C') + ix.select_by_name(mol,'O')
@@ -41,6 +42,9 @@ def rcs_filter(a_r, base_group, tol_range = 0.1):
 
 possible_list = []
 
+num_enum = 0
+num_pn = 0
+
 def rcs_action(mol_r, p_a, b_s, tol_range = 0.1):
     if len(mol_r) > 0:
         for p in p_a: # Possible atom
@@ -65,15 +69,17 @@ def rcs_action(mol_r, p_a, b_s, tol_range = 0.1):
                     continue
             if duplicated is False:
                 possible_list.append(mols)
+                print("The possible No. {} is found.".format(len(possible_list)))
+
+t0 = time.clock()
 
 rcs_action(mol_combr, [A1], [], TOLERANCE_LEVEL)
 
-print("Number of combinations to work with: {}".format(8**(len(mol_combr))))
-print("Number of plausible results: {}".format(len(possible_list)))
+t_taken = time.clock() - t0
+
+print("-----The structure of molecule is found as follows:-----")
 
 def save_mols(mols, icode = None):
-    print("-----The structure of molecule is found as follows:-----")
-
     if icode != None:
         print("**** Molecule No.{} ****".format(icode))
     for m in mols:
@@ -82,8 +88,10 @@ def save_mols(mols, icode = None):
         filename = 'molecule_results/{0}_{1}.xyz'.format(file_name,int(time.time()))
     else:
         filename = 'molecule_results/{0}_{1}_{2}.xyz'.format(file_name,int(time.time()),str(icode))
-    # ix.export_xyz(filename, mols)
-    # print("Results saved to xyz file.")
+
+    if SAVE_XYZ:
+        ix.export_xyz(filename, mols)
+        print("Results saved to xyz file.")
 
     #
     # rmol_C = ix.select_by_name(mols, 'C')
@@ -103,3 +111,8 @@ i = 0
 for pl in possible_list:
     i += 1
     save_mols(pl, i)
+
+print("=================")
+print("Duration of computaion: {} s.".format(round(t_taken, 3)))
+print("Number of combinations to work with: {}".format(8**(len(mol_combr))))
+print("Number of plausible results: {}".format(len(possible_list)))

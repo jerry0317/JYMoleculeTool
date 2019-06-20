@@ -230,6 +230,7 @@ def distance_atom(atom_1, atom_2):
 # Filtering by the bond length
 def bond_length_filter(rvec_1, rvec_2, b_length, tol_range = 0.1):
     d = distance(rvec_1, rvec_2)
+    #print("Blf distance: {}".format(d))
     if (b_length - tol_range) < d < (b_length + tol_range):
         return True
     else:
@@ -283,14 +284,18 @@ def bond_length_atom_finder(validated_mols, m, tol_range = 0.1):
 def bond_length_molecule_constructer(st_mol, atom, tol_range = 0.1):
     m = copy.deepcopy(st_mol)
     bgs = copy.deepcopy(m.bond_graphs)
+    # print("received atom rvec:{}".format(atom.rvec.dictvec))
     if m.size <= 0:
         m.add_atom(atom)
     else:
-        b_pass = False
         m.bond_graphs.clear()
+        #print("st_mol.atoms:{}".format(len(st_mol.atoms)))
         for vm in st_mol.atoms:
             possible_bts = possible_bondtypes(vm, atom)
+            # print("possible_bts:")
+            # print([b.bdcode for b in possible_bts])
             for bt in possible_bts:
+                d_pass = False
                 if bondtype_length_filter_atom(vm, atom, bt, tol_range) is True:
                     v_n = [a for a in m.atoms if a != vm]
                     d_pass = True
@@ -304,9 +309,14 @@ def bond_length_molecule_constructer(st_mol, atom, tol_range = 0.1):
                             m.bond_graphs.add(Chem_bond_graph({p_bond}))
                         elif st_mol.size > 1:
                             for bond_graph in bgs:
-                                pbg = copy.copy(bond_graph)
+                                pbg = copy.deepcopy(bond_graph)
                                 pbg.bonds.add(p_bond)
                                 m.bond_graphs.add(pbg)
+                #print("d_pass:{}".format(d_pass))
+    # print("m atoms: {}".format(len(m.atoms)))
+    # print("m bondgraphs:")
+    # for bd in m.bond_graphs:
+    #     bd.print_bdcodes()
 
     return m
 
@@ -328,3 +338,20 @@ def dict_list_to_atom_list(mols):
     for m in mols:
         ats.append(dict_to_atom(m))
     return ats
+
+# Convert the atom type to dict type
+def atom_to_dict(a):
+    name = a.name
+    try:
+        rvec = a.rvec.dictvec
+    except Exception as e:
+        rvec = None
+    dict = {'name': name, 'rvec': rvec}
+    return dict
+
+# Convert atom list to dict lists
+def atom_list_to_dict_list(atoms):
+    dicts = []
+    for a in atoms:
+        dicts.append(atom_to_dict(a))
+    return dicts
