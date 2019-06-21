@@ -91,7 +91,7 @@ def save_mols(mols, icode = None):
 
     if SAVE_XYZ:
         ix.export_xyz(filename, mols)
-        print("Results saved to xyz file.")
+        # print("Results saved to xyz file.")
 
     #
     # rmol_C = ix.select_by_name(mols, 'C')

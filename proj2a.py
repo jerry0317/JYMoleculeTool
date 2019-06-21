@@ -113,7 +113,7 @@ def save_mols_atom(st_mol, icode = None):
 
     if SAVE_XYZ:
         ix.export_xyz(filename, mt.atom_list_to_dict_list(st_mol.atoms))
-        print("Results saved to xyz file.")
+        # print("Results saved to xyz file.")
 
 i = 0
 for pl in possible_list:
@@ -122,5 +122,5 @@ for pl in possible_list:
 
 print("=================")
 print("Duration of computaion: {} s.".format(round(t_taken, 3)))
-print("Number of combinations to work with: {}".format(8**(len(mol_combr))))
-print("Number of plausible results: {}".format(len(possible_list)))
+print("Number of combinations to work with: {}.".format(8**(len(mol_combr))))
+print("Number of plausible results: {}.".format(len(possible_list)))

@@ -93,7 +93,7 @@ class Chem_bond(object):
 
     # Real distance between the two atoms (real bond length)
     @property
-    def diameter(self):
+    def distance(self):
         at_l = list(self.atoms)
         atom_1 = at_l[0]
         atom_2 = at_l[1]
@@ -113,7 +113,7 @@ class Chem_bond_graph(object):
     def __hash__(self):
         return hash(frozenset(self.bonds))
 
-    def atom_degree(self, atom):
+    def degree_of_atom(self, atom):
         deg = 0
         for b in self.bonds:
             if atom in b.atoms:
@@ -138,6 +138,9 @@ class Strc_molecule(object):
             return NotImplemented
 
         return self.atoms == other.atoms and self.bond_graphs == other.bond_graphs
+
+    def __hash__(self):
+        return hash((frozenset(self.atoms), frozenset(self.bond_graphs)))
 
     def add_atom(self, atom):
         self.atoms.add(atom)
