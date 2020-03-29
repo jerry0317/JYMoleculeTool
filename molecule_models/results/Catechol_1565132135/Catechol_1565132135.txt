@@ -1,0 +1,46 @@
+-----------------------------------
+[Basic Settings]
+<Test Mode>
+Bond length tolerance level: 0.01
+Bond angle tolerance ratio: 0.1
+Rounded digits after decimal: 2
+Trim level: 0.0
+-----------------------------------
+**** Molecule No.1 ****
+<Original Structure>
+O     [1.79, -1.39, -0.0]     VSEPR Type: n/a       BAs: []
+O     [1.79, 1.39, 0.0]     VSEPR Type: n/a       BAs: []
+C     [-1.8, -0.7, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.9°]
+C     [-1.8, 0.7, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.9°]
+C     [-0.6, -1.39, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+C     [-0.6, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+C     [0.61, 0.7, -0.0]     VSEPR Type: ax3e0     BAs: [CCO: 120.0°, OCC: 120.3°, CCC: 119.7°]     D3APD: 0.0
+C     [0.61, -0.7, -0.0]     VSEPR Type: ax3e0     BAs: [CCC: 119.7°, OCC: 120.0°, CCO: 120.3°]     D3APD: 0.0
+--Bond information--
+The number of possible bond graphs: 18
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.3842
+Bond code: CC2   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.3929
+Bond code: CO1   Bond distance: 1.3669
+Bond code: CC1   Bond distance: 1.3842
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.3929
+Bond code: CO1   Bond distance: 1.3669
+- Center of Mass: [0.1372, -0.0, 0.0]
+- CM Deviation: [-0.0, -0.0, 0.0]
+- CM Deviation Magnitude: 0.0
+-----------------------------------
+[Molecule name] Catechol
+-- -- -- -- -- -- -- -- -- -- -- --
+[Note] The original structure is in the results.
+-----------------------------------
+Duration of computation: 0.0374 s.
+Total number of non-hydrogen atoms: 8.
+Total number of combinations to work with: 2097152.
+Total number of possible structures: 1.
+Total number of possible bond graphs: 18.
+Total number of element hash graphs: 4.
+Total number of identifier hash graphs: 18.
+Reduction efficiency: 2097152.0.
+-----------------------------------

@@ -1,0 +1,89 @@
+-----------------------------------
+[Basic Settings]
+Bond length tolerance level: 0.01
+Bond angle tolerance ratio: 0.15
+Rounded digits after decimal: 2
+Trim level: 0.0
+-----------------------------------
+**** Molecule No.1 ****
+<Original Structure>
+C     [5.8, -0.66, -0.37]     VSEPR Type: ax2e2     BAs: [CCC: 120.5°]
+C     [5.64, -1.25, 0.88]     VSEPR Type: ax2e2     BAs: [CCC: 119.9°]
+C     [-4.53, -3.33, 0.46]     VSEPR Type: ax2e2     BAs: [CCC: 120.1°]
+C     [-5.04, -2.08, 0.82]     VSEPR Type: ax2e1     BAs: [CCC: 119.9°]
+C     [-1.91, 4.47, 0.08]     VSEPR Type: n/a       BAs: []
+C     [4.69, -0.3, -1.13]     VSEPR Type: ax2e1     BAs: [CCC: 118.4°]
+C     [4.36, -1.48, 1.38]     VSEPR Type: ax2e2     BAs: [CCC: 120.1°]
+C     [-3.32, -3.42, -0.23]     VSEPR Type: ax2e2     BAs: [CCC: 119.7°]
+C     [-4.33, -0.92, 0.5]     VSEPR Type: ax2e1     BAs: [CCC: 120.0°]
+C     [-0.54, 3.32, 1.85]     VSEPR Type: n/a       BAs: []
+O     [-3.14, 1.77, 1.07]     VSEPR Type: n/a       BAs: []
+C     [-0.81, 3.43, 0.34]     VSEPR Type: ax3e1     BAs: [CCC: 109.9°, CCC: 110.7°, CCC: 111.4°]
+C     [3.43, -0.54, -0.61]     VSEPR Type: ax3e0     BAs: [CCC: 117.5°, CCC: 122.3°, CCC: 120.2°]
+C     [-2.62, -2.26, -0.55]     VSEPR Type: ax2e1     BAs: [CCC: 120.5°]
+C     [3.24, -1.12, 0.63]     VSEPR Type: ax3e1     BAs: [CCC: 122.3°, CCC: 118.7°, CCC: 119.0°]
+C     [-3.12, -1.01, -0.19]     VSEPR Type: ax3e0     BAs: [CCN: 120.2°, CCN: 120.0°, CCC: 119.8°]
+C     [-1.57, -0.27, -2.79]     VSEPR Type: n/a       BAs: []
+O     [1.94, 0.82, 2.24]     VSEPR Type: n/a       BAs: []
+O     [1.77, -0.97, -2.21]     VSEPR Type: n/a       BAs: []
+C     [-2.39, 1.37, 0.19]     VSEPR Type: ax3e0     BAs: [OCC: 122.8°, NCC: 107.0°, OCN: 130.0°]
+C     [2.26, -0.15, -1.44]     VSEPR Type: ax3e0     BAs: [OCN: 124.3°, CCO: 119.3°, CCN: 116.3°]
+C     [0.64, 1.66, -1.95]     VSEPR Type: ax2e2     BAs: [CCN: 109.4°]
+C     [1.88, -1.38, 1.19]     VSEPR Type: ax2e2     BAs: [CCC: 113.1°]
+O     [0.08, -0.47, 2.46]     VSEPR Type: n/a       BAs: []
+N     [-2.4, 0.17, -0.52]     VSEPR Type: ax3e1     BAs: [NNC: 123.2°, CNC: 126.9°, CNN: 108.2°]
+N     [1.77, 1.14, -1.25]     VSEPR Type: ax2e2     BAs: [CNC: 123.3°]
+C     [-1.18, 2.12, -0.24]     VSEPR Type: ax3e0     BAs: [CCC: 105.6°, CCC: 132.0°, CCC: 122.5°]
+C     [1.34, -0.22, 2.0]     VSEPR Type: ax3e0     BAs: [CCO: 111.7°, OCO: 122.8°, CCO: 125.5°]
+N     [-1.33, 0.19, -1.43]     VSEPR Type: ax3e1     BAs: [CNC: 121.1°, CNN: 118.4°, CNN: 107.0°]
+C     [-0.6, 1.36, -1.18]     VSEPR Type: ax3e0     BAs: [CCN: 111.9°, NCC: 120.6°, CCC: 127.5°]
+--Bond information--
+The number of possible bond graphs: 324
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.3921
+Bond code: CC1   Bond distance: 1.536
+Bond code: CC1   Bond distance: 1.3915
+Bond code: CO1   Bond distance: 1.3644
+Bond code: CC1   Bond distance: 1.5144
+Bond code: CO2   Bond distance: 1.2269
+Bond code: CC1   Bond distance: 1.4797
+Bond code: CC1   Bond distance: 1.4936
+Bond code: CC1   Bond distance: 1.4901
+Bond code: CC1   Bond distance: 1.5379
+Bond code: CN1   Bond distance: 1.4556
+Bond code: CC2   Bond distance: 1.3841
+Bond code: CC2   Bond distance: 1.3972
+Bond code: CC1   Bond distance: 1.4866
+Bond code: CC1   Bond distance: 1.3958
+Bond code: CN1   Bond distance: 1.4015
+Bond code: CC1   Bond distance: 1.3972
+Bond code: CN1   Bond distance: 1.3929
+Bond code: CC1   Bond distance: 1.3952
+Bond code: CC1   Bond distance: 1.4871
+Bond code: CN1   Bond distance: 1.3943
+Bond code: CN1   Bond distance: 1.4273
+Bond code: CC2   Bond distance: 1.3936
+Bond code: NN1   Bond distance: 1.4048
+Bond code: CO2   Bond distance: 1.2235
+Bond code: CC1   Bond distance: 1.3933
+Bond code: CC1   Bond distance: 1.3958
+Bond code: CC2   Bond distance: 1.3407
+Bond code: CN1   Bond distance: 1.4212
+Bond code: CO2   Bond distance: 1.2244
+Bond code: CC1   Bond distance: 1.3821
+Bond code: CC1   Bond distance: 1.3926
+- Center of Mass: [-0.0031, 0.0195, 0.0204]
+- CM Deviation: [0.0, -0.0, -0.0]
+- CM Deviation Magnitude: 0.0
+-----------------------------------
+[Molecule name] Aspirin-isopropylantipyrine
+-- -- -- -- -- -- -- -- -- -- -- --
+[Note] The original structure is in the results.
+-----------------------------------
+Duration of computation: 5601.3286 s.
+Total number of non-hydrogen atoms: 30.
+Total number of combinations to work with: 154742504910672534362390528.
+Total number of possible structures: 1.
+Total number of possible bond graphs: 324.
+Reduction efficiency: 1.5474250491067253e+26.
+-----------------------------------

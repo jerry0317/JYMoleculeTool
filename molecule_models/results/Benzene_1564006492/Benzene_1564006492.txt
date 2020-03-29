@@ -1,0 +1,247 @@
+-----------------------------------
+[Basic Settings]
+Bond length tolerance level: 0.1
+Bond angle tolerance ratio: 0.1
+Rounded digits after decimal: 2
+-----------------------------------
+**** Molecule No.1 ****
+C     [-1.2, -0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [-0.01, -1.39, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+C     [-0.01, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 1
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC1   Bond distance: 1.42
+Bond code: CC2   Bond distance: 1.38
+- Center of Mass: [0.0, 0.0, 0.0]
+- CM Deviation: [0.0, 0.0, 0.0]
+- CM Deviation Magnitude: 0.0
+**** Molecule No.2 ****
+<Original Structure>
+C     [1.2, -0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.7°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.7°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.8°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [0.01, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+C     [-0.01, -1.39, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 33
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC2   Bond distance: 1.3892
+- Center of Mass: [0.0, 0.0, 0.0]
+- CM Deviation: [0.0, 0.0, 0.0]
+- CM Deviation Magnitude: 0.0
+**** Molecule No.3 ****
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [1.2, -0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.4°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.4°]
+C     [0.01, -1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+C     [-0.01, 1.39, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 4
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.4
+- Center of Mass: [0.0, -0.0, 0.0]
+- CM Deviation: [0.0, -0.0, 0.0]
+- CM Deviation Magnitude: 0.0
+**** Molecule No.4 ****
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.7°]
+C     [1.2, -0.71, 0.0]     VSEPR Type: ax2e0     BAs: [CCC: 120.2°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.4°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [0.01, -1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+C     [0.01, 1.39, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 12
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC2   Bond distance: 1.4
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.388
+- Center of Mass: [0.0033, 0.0, 0.0]
+- CM Deviation: [0.0033, 0.0, 0.0]
+- CM Deviation Magnitude: 0.00333
+**** Molecule No.5 ****
+C     [-1.2, -0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.3°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.3°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [-0.01, -1.39, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+C     [0.01, 1.39, -0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 4
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC1   Bond distance: 1.42
+Bond code: CC2   Bond distance: 1.38
+Bond code: CC1   Bond distance: 1.388
+- Center of Mass: [0.0033, 0.0, 0.0]
+- CM Deviation: [0.0033, 0.0, 0.0]
+- CM Deviation Magnitude: 0.00333
+**** Molecule No.6 ****
+C     [1.2, -0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.4°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.8°]
+C     [-0.01, 1.39, -0.0]     VSEPR Type: ax2e0     BAs: [CCC: 120.4°]
+C     [-0.01, -1.39, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 10
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC2   Bond distance: 1.388
+Bond code: CC2   Bond distance: 1.4066
+- Center of Mass: [-0.0033, 0.0, 0.0]
+- CM Deviation: [-0.0033, 0.0, 0.0]
+- CM Deviation Magnitude: 0.00333
+**** Molecule No.7 ****
+C     [-1.2, -0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.3°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.3°]
+C     [0.01, -1.39, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+C     [-0.01, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 3
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC1   Bond distance: 1.42
+Bond code: CC2   Bond distance: 1.38
+Bond code: CC1   Bond distance: 1.3892
+- Center of Mass: [0.0033, 0.0, 0.0]
+- CM Deviation: [0.0033, 0.0, 0.0]
+- CM Deviation Magnitude: 0.00333
+**** Molecule No.8 ****
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [1.2, 0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.7°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.4°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [0.01, -1.39, 0.0]     VSEPR Type: ax2e0     BAs: [CCC: 119.9°]
+C     [-0.01, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.9°]
+--Bond information--
+The number of possible bond graphs: 10
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC2   Bond distance: 1.4066
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC2   Bond distance: 1.3892
+- Center of Mass: [0.0, 0.0067, 0.0]
+- CM Deviation: [0.0, 0.0067, 0.0]
+- CM Deviation Magnitude: 0.00667
+**** Molecule No.9 ****
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.4°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [0.01, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.9°]
+C     [-0.01, -1.39, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.9°]
+--Bond information--
+The number of possible bond graphs: 13
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC2   Bond distance: 1.4066
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC2   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.388
+- Center of Mass: [0.0, 0.0067, 0.0]
+- CM Deviation: [0.0, 0.0067, 0.0]
+- CM Deviation Magnitude: 0.00667
+**** Molecule No.10 ****
+C     [-1.2, -0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.3°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.3°]
+C     [1.21, 0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.3°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.3°]
+C     [0.01, -1.39, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+C     [0.01, 1.39, -0.0]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+--Bond information--
+The number of possible bond graphs: 12
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.42
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC2   Bond distance: 1.38
+- Center of Mass: [0.0067, 0.0, 0.0]
+- CM Deviation: [0.0067, 0.0, 0.0]
+- CM Deviation Magnitude: 0.00667
+**** Molecule No.11 ****
+C     [1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.7°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.8°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.4°]
+C     [0.01, -1.39, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.9°]
+C     [0.01, 1.39, -0.0]     VSEPR Type: ax2e0     BAs: [CCC: 120.9°]
+--Bond information--
+The number of possible bond graphs: 13
+====The first bond graph====
+Bond code: CC2   Bond distance: 1.388
+Bond code: CC1   Bond distance: 1.3892
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC2   Bond distance: 1.3706
+- Center of Mass: [0.0033, 0.0067, 0.0]
+- CM Deviation: [0.0033, 0.0067, 0.0]
+- CM Deviation Magnitude: 0.00745
+**** Molecule No.12 ****
+C     [-1.2, 0.71, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.2°]
+C     [1.2, 0.71, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.7°]
+C     [-1.21, -0.69, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.8°]
+C     [1.21, -0.69, 0.0]     VSEPR Type: ax2e2     BAs: [CCC: 119.4°]
+C     [-0.01, 1.39, -0.0]     VSEPR Type: ax2e1     BAs: [CCC: 120.9°]
+C     [-0.01, -1.39, 0.0]     VSEPR Type: ax2e1     BAs: [CCC: 119.9°]
+--Bond information--
+The number of possible bond graphs: 10
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.4066
+Bond code: CC2   Bond distance: 1.3706
+Bond code: CC1   Bond distance: 1.388
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC1   Bond distance: 1.4
+Bond code: CC2   Bond distance: 1.3892
+- Center of Mass: [-0.0033, 0.0067, 0.0]
+- CM Deviation: [-0.0033, 0.0067, 0.0]
+- CM Deviation Magnitude: 0.00745
+-----------------------------------
+[Molecule name] Benzene
+-- -- -- -- -- -- -- -- -- -- -- --
+[Note] The original structure is in the results.
+-----------------------------------
+Duration of computation: 0.0498 s.
+Total number of non-hydrogen atoms: 6.
+Total number of combinations to work with: 32768.
+Total number of possible structures: 12.
+Total number of possible bond graphs: 125.
+Reduction efficiency: 2730.7.
+-----------------------------------

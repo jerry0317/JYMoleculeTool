@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllDisks</key>
+	<array>
+		<string>disk2</string>
+		<string>disk2s1</string>
+		<string>disk2s2</string>
+		<string>disk2s3</string>
+		<string>disk2s4</string>
+		<string>disk2s5</string>
+		<string>disk2s6</string>
+		<string>disk2s7</string>
+		<string>disk2s8</string>
+		<string>disk3</string>
+		<string>disk3s1</string>
+		<string>disk3s2</string>
+		<string>disk3s3</string>
+		<string>disk3s4</string>
+		<string>disk3s5</string>
+	</array>
+	<key>AllDisksAndPartitions</key>
+	<array>
+		<dict>
+			<key>Content</key>
+			<string>GUID_partition_scheme</string>
+			<key>DeviceIdentifier</key>
+			<string>disk2</string>
+			<key>Partitions</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>EFI</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s1</string>
+					<key>DiskUUID</key>
+					<string>EF98A26C-4EAC-4B6B-A678-C0D8241ABDA5</string>
+					<key>Size</key>
+					<integer>209715200</integer>
+					<key>VolumeName</key>
+					<string>EFI</string>
+					<key>VolumeUUID</key>
+					<string>0E239BC6-F960-3107-89CF-1C97F78BB46B</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Apple_HFS</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s2</string>
+					<key>DiskUUID</key>
+					<string>783A6581-14E2-44B8-B60E-9A96B6A67FAE</string>
+					<key>MountPoint</key>
+					<string>/Volumes/Data Studio</string>
+					<key>Size</key>
+					<integer>3750808371200</integer>
+					<key>VolumeName</key>
+					<string>Data Studio</string>
+					<key>VolumeUUID</key>
+					<string>9DFC5564-3C65-3396-9BA2-4778F203D88D</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Apple_Boot</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s3</string>
+					<key>DiskUUID</key>
+					<string>102485C8-B7A5-4A85-A6FF-5B340037B082</string>
+					<key>Size</key>
+					<integer>650002432</integer>
+					<key>VolumeName</key>
+					<string>Recovery HD</string>
+					<key>VolumeUUID</key>
+					<string>A4221491-2C74-304B-BE78-414461CE95A5</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Apple_APFS</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s4</string>
+					<key>DiskUUID</key>
+					<string>DC1F5493-D42B-4D7E-8E6F-CA1C73253ACA</string>
+					<key>Size</key>
+					<integer>249350004736</integer>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Apple_HFS</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s5</string>
+					<key>DiskUUID</key>
+					<string>05415B7B-E87B-4B91-A480-D3B331E07FE4</string>
+					<key>MountPoint</key>
+					<string>/Volumes/Time Machine B</string>
+					<key>Size</key>
+					<integer>619865788416</integer>
+					<key>VolumeName</key>
+					<string>Time Machine B</string>
+					<key>VolumeUUID</key>
+					<string>FE0DB292-621D-360D-94B1-683FD572F539</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Apple_HFS</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s6</string>
+					<key>DiskUUID</key>
+					<string>679334C1-2ABC-43D2-A7BC-6E763F795B31</string>
+					<key>MountPoint</key>
+					<string>/Volumes/Time Machine C</string>
+					<key>Size</key>
+					<integer>999865782272</integer>
+					<key>VolumeName</key>
+					<string>Time Machine C</string>
+					<key>VolumeUUID</key>
+					<string>4DDCCCB4-9A88-3C87-A0F5-39B8249D3E4C</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Microsoft Basic Data</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s7</string>
+					<key>DiskUUID</key>
+					<string>5C8FF994-D410-4896-B0A4-B8185863934D</string>
+					<key>MountPoint</key>
+					<string>/Volumes/BC Data</string>
+					<key>Size</key>
+					<integer>379037127168</integer>
+					<key>VolumeName</key>
+					<string>BC Data</string>
+					<key>VolumeUUID</key>
+					<string>100C2990-AF3D-4538-8BD1-443F67910972</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>Windows Recovery</string>
+					<key>DeviceIdentifier</key>
+					<string>disk2s8</string>
+					<key>DiskUUID</key>
+					<string>16DCBF85-711A-459A-B4A3-C0A25DBC0A26</string>
+					<key>Size</key>
+					<integer>827326464</integer>
+				</dict>
+			</array>
+			<key>Size</key>
+			<integer>6001018142720</integer>
+		</dict>
+		<dict>
+			<key>APFSVolumes</key>
+			<array>
+				<dict>
+					<key>DeviceIdentifier</key>
+					<string>disk3s1</string>
+					<key>DiskUUID</key>
+					<string>2205A334-0107-457A-8253-3D92ADB6F117</string>
+					<key>MountPoint</key>
+					<string>/Volumes/macOS BM Ex - Data</string>
+					<key>Size</key>
+					<integer>249350004736</integer>
+					<key>VolumeName</key>
+					<string>macOS BM Ex - Data</string>
+					<key>VolumeUUID</key>
+					<string>2205A334-0107-457A-8253-3D92ADB6F117</string>
+				</dict>
+				<dict>
+					<key>DeviceIdentifier</key>
+					<string>disk3s2</string>
+					<key>DiskUUID</key>
+					<string>5DC54420-F7A0-43AA-ACE2-FFE117444D6F</string>
+					<key>Size</key>
+					<integer>249350004736</integer>
+					<key>VolumeName</key>
+					<string>Preboot</string>
+					<key>VolumeUUID</key>
+					<string>5DC54420-F7A0-43AA-ACE2-FFE117444D6F</string>
+				</dict>
+				<dict>
+					<key>DeviceIdentifier</key>
+					<string>disk3s3</string>
+					<key>DiskUUID</key>
+					<string>590CB785-C9C6-4F25-AE18-DD6C46A27195</string>
+					<key>Size</key>
+					<integer>249350004736</integer>
+					<key>VolumeName</key>
+					<string>Recovery</string>
+					<key>VolumeUUID</key>
+					<string>590CB785-C9C6-4F25-AE18-DD6C46A27195</string>
+				</dict>
+				<dict>
+					<key>DeviceIdentifier</key>
+					<string>disk3s4</string>
+					<key>DiskUUID</key>
+					<string>87A42C39-5F05-4A8F-A715-953D2503BAA5</string>
+					<key>Size</key>
+					<integer>249350004736</integer>
+					<key>VolumeName</key>
+					<string>VM</string>
+					<key>VolumeUUID</key>
+					<string>87A42C39-5F05-4A8F-A715-953D2503BAA5</string>
+				</dict>
+				<dict>
+					<key>DeviceIdentifier</key>
+					<string>disk3s5</string>
+					<key>DiskUUID</key>
+					<string>D1338F08-BCD1-47EE-8B0E-93137ECFEBA5</string>
+					<key>MountPoint</key>
+					<string>/Volumes/macOS BM Ex</string>
+					<key>Size</key>
+					<integer>249350004736</integer>
+					<key>VolumeName</key>
+					<string>macOS BM Ex</string>
+					<key>VolumeUUID</key>
+					<string>D1338F08-BCD1-47EE-8B0E-93137ECFEBA5</string>
+				</dict>
+			</array>
+			<key>Content</key>
+			<string>EF57347C-0000-11AA-AA11-00306543ECAC</string>
+			<key>DeviceIdentifier</key>
+			<string>disk3</string>
+			<key>Partitions</key>
+			<array/>
+			<key>Size</key>
+			<integer>249350004736</integer>
+		</dict>
+	</array>
+	<key>VolumesFromDisks</key>
+	<array>
+		<string>Data Studio</string>
+		<string>Time Machine B</string>
+		<string>Time Machine C</string>
+		<string>BC Data</string>
+		<string>macOS BM Ex - Data</string>
+		<string>macOS BM Ex</string>
+	</array>
+	<key>WholeDisks</key>
+	<array>
+		<string>disk2</string>
+		<string>disk3</string>
+	</array>
+</dict>
+</plist>

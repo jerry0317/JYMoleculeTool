@@ -1,0 +1,2 @@
+This legacy project is the early experiment (written in Python) of [JYMoleculeTool-Swift](https://github.com/jerry0317/JYMoleculeTool-Swift), and this work is no longer expected to be continued. The project, however, is currently being re-implemented in Python with machine learning in [JYMoleculeTool-ML-Python](https://github.com/jerry0317/JYMoleculeTool-ML-Python), and related updates may be found here.
+

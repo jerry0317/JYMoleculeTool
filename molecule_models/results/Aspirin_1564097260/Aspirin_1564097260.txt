@@ -1,0 +1,53 @@
+-----------------------------------
+[Basic Settings]
+Bond length tolerance level: 0.01
+Bond angle tolerance ratio: 0.1
+Rounded digits after decimal: 2
+Trim level: 0.0
+-----------------------------------
+**** Molecule No.1 ****
+<Original Structure>
+C     [3.53, 0.6, 0.16]     VSEPR Type: n/a       BAs: []
+C     [-2.79, 0.76, -0.25]     VSEPR Type: ax2e2     BAs: [CCC: 119.4°]
+O     [-0.7, -2.71, -0.75]     VSEPR Type: n/a       BAs: []
+C     [-2.08, 1.92, 0.07]     VSEPR Type: ax2e2     BAs: [CCC: 120.4°]
+O     [0.8, -2.18, 0.87]     VSEPR Type: n/a       BAs: []
+O     [1.78, 0.81, -1.48]     VSEPR Type: n/a       BAs: []
+C     [2.11, 0.67, -0.31]     VSEPR Type: ax3e0     BAs: [CCO: 124.1°, OCO: 125.6°, CCO: 110.3°]
+C     [-2.14, -0.47, -0.22]     VSEPR Type: ax2e1     BAs: [CCC: 120.5°]
+C     [-0.73, 1.85, 0.41]     VSEPR Type: ax2e1     BAs: [CCC: 119.6°]
+C     [-0.14, -1.85, 0.15]     VSEPR Type: ax3e0     BAs: [OCC: 126.4°, OCO: 122.1°, CCO: 111.5°]
+O     [1.23, 0.55, 0.78]     VSEPR Type: ax2e2     BAs: [COC: 114.1°]
+C     [-0.79, -0.55, 0.12]     VSEPR Type: ax3e0     BAs: [CCC: 119.7°, CCC: 119.3°, CCC: 121.0°]
+C     [-0.09, 0.61, 0.44]     VSEPR Type: ax3e0     BAs: [CCO: 120.5°, OCC: 119.2°, CCC: 120.3°]
+--Bond information--
+The number of possible bond graphs: 4
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.3939
+Bond code: CC1   Bond distance: 1.4538
+Bond code: CO1   Bond distance: 1.365
+Bond code: CO2   Bond distance: 1.2237
+Bond code: CO2   Bond distance: 1.2292
+Bond code: CO1   Bond distance: 1.3644
+Bond code: CC2   Bond distance: 1.3957
+Bond code: CO1   Bond distance: 1.406
+Bond code: CC2   Bond distance: 1.3945
+Bond code: CC1   Bond distance: 1.3972
+Bond code: CC1   Bond distance: 1.4974
+Bond code: CC1   Bond distance: 1.3921
+Bond code: CC1   Bond distance: 1.3915
+- Center of Mass: [0.0714, -0.0811, -0.0141]
+- CM Deviation: [-0.0, -0.0, 0.0]
+- CM Deviation Magnitude: 0.0
+-----------------------------------
+[Molecule name] Aspirin
+-- -- -- -- -- -- -- -- -- -- -- --
+[Note] The original structure is in the results.
+-----------------------------------
+Duration of computation: 0.1023 s.
+Total number of non-hydrogen atoms: 13.
+Total number of combinations to work with: 68719476736.
+Total number of possible structures: 1.
+Total number of possible bond graphs: 4.
+Reduction efficiency: 68719476736.0.
+-----------------------------------

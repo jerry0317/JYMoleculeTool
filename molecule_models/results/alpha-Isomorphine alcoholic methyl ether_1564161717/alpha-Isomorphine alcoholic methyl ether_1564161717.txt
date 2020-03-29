@@ -1,0 +1,75 @@
+-----------------------------------
+[Basic Settings]
+Bond length tolerance level: 0.01
+Bond angle tolerance ratio: 0.1
+Rounded digits after decimal: 2
+Trim level: 0.0
+-----------------------------------
+**** Molecule No.1 ****
+<Original Structure>
+C     [2.89, 3.17, 0.79]     VSEPR Type: n/a       BAs: []
+C     [-4.13, 1.05, 0.78]     VSEPR Type: n/a       BAs: []
+O     [3.29, -2.45, 0.65]     VSEPR Type: n/a       BAs: []
+O     [2.02, 3.15, -0.33]     VSEPR Type: ax2e2     BAs: [COC: 111.4°]
+C     [1.31, -3.18, -0.49]     VSEPR Type: ax2e2     BAs: [CCC: 121.6°]
+N     [-3.25, -0.08, 0.51]     VSEPR Type: ax3e1     BAs: [CNC: 112.3°, CNC: 111.2°, CNC: 114.1°]
+C     [0.01, -2.93, -0.97]     VSEPR Type: ax2e1     BAs: [CCC: 120.0°]
+C     [2.02, -2.22, 0.24]     VSEPR Type: ax3e0     BAs: [OCC: 121.6°, CCC: 117.2°, OCC: 121.1°]
+C     [-2.43, -0.41, 1.69]     VSEPR Type: ax2e2     BAs: [CCN: 115.2°]
+C     [0.69, 1.87, -1.83]     VSEPR Type: ax2e1     BAs: [CCC: 124.3°]
+C     [-1.95, -1.29, -1.25]     VSEPR Type: ax2e2     BAs: [CCC: 115.0°]
+C     [-2.47, 0.1, -0.74]     VSEPR Type: ax3e1     BAs: [CCC: 112.8°, CCN: 109.9°, NCC: 111.1°]
+C     [1.6, 1.82, -0.64]     VSEPR Type: ax3e1     BAs: [CCC: 116.8°, CCO: 108.6°, CCO: 107.8°]
+C     [-0.61, 1.55, -1.8]     VSEPR Type: ax2e1     BAs: [CCC: 122.9°]
+O     [1.94, 0.1, 1.07]     VSEPR Type: ax2e2     BAs: [COC: 103.3°]
+C     [-1.14, 0.41, 1.84]     VSEPR Type: ax2e2     BAs: [CCC: 112.2°]
+C     [-0.61, -1.71, -0.7]     VSEPR Type: ax3e0     BAs: [CCC: 124.6°, CCC: 118.3°, CCC: 117.0°]
+C     [-1.32, 1.14, -0.54]     VSEPR Type: ax3e1     BAs: [CCC: 114.9°, CCC: 106.4°, CCC: 112.5°]
+C     [1.39, -1.02, 0.48]     VSEPR Type: ax3e0     BAs: [CCO: 111.9°, OCC: 126.8°, CCC: 121.2°]
+C     [1.02, 1.19, 0.66]     VSEPR Type: ax3e1     BAs: [OCC: 106.1°, OCC: 107.3°, CCC: 114.8°]
+C     [-0.37, 0.54, 0.5]     VSEPR Type: ax4e0     BAs: [CCC: 97.2°, CCC: 108.2°, CCC: 117.7°, CCC: 110.7°, CCC: 109.4°, CCC: 113.1°]
+C     [0.1, -0.8, 0.07]     VSEPR Type: ax3e1     BAs: [CCC: 126.2°, CCC: 110.9°, CCC: 122.8°]
+--Bond information--
+The number of possible bond graphs: 10
+====The first bond graph====
+Bond code: CC1   Bond distance: 1.5359
+Bond code: CO1   Bond distance: 1.4288
+Bond code: CC2   Bond distance: 1.3949
+Bond code: CC1   Bond distance: 1.5033
+Bond code: CC1   Bond distance: 1.5693
+Bond code: CC1   Bond distance: 1.4989
+Bond code: CC2   Bond distance: 1.3391
+Bond code: CC1   Bond distance: 1.3995
+Bond code: CC1   Bond distance: 1.5509
+Bond code: CC1   Bond distance: 1.3875
+Bond code: CC1   Bond distance: 1.5081
+Bond code: CN1   Bond distance: 1.4743
+Bond code: CC1   Bond distance: 1.3713
+Bond code: CC1   Bond distance: 1.5428
+Bond code: CN1   Bond distance: 1.4844
+Bond code: CN1   Bond distance: 1.4575
+Bond code: CC2   Bond distance: 1.3764
+Bond code: CO1   Bond distance: 1.4841
+Bond code: CC1   Bond distance: 1.4082
+Bond code: CC1   Bond distance: 1.4837
+Bond code: CC1   Bond distance: 1.5634
+Bond code: CO1   Bond distance: 1.3802
+Bond code: CO1   Bond distance: 1.4183
+Bond code: CC1   Bond distance: 1.5567
+Bond code: CO1   Bond distance: 1.3542
+Bond code: CC1   Bond distance: 1.531
+- Center of Mass: [0.0806, 0.0109, 0.0232]
+- CM Deviation: [0.0, 0.0, -0.0]
+- CM Deviation Magnitude: 0.0
+-----------------------------------
+[Molecule name] alpha-Isomorphine alcoholic methyl ether
+-- -- -- -- -- -- -- -- -- -- -- --
+[Note] The original structure is in the results.
+-----------------------------------
+Duration of computation: 98.377 s.
+Total number of non-hydrogen atoms: 22.
+Total number of combinations to work with: 9223372036854775808.
+Total number of possible structures: 1.
+Total number of possible bond graphs: 10.
+Reduction efficiency: 9.223372036854776e+18.
+-----------------------------------
